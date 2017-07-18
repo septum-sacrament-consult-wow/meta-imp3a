@@ -15,6 +15,7 @@ XSERVER = " \
         mesa-driver-swrast \
         xf86-video-modesetting \
 	xf86-video-fbdev \
+	xf86-video-ati \
         xf86-input-evdev \
         xf86-input-keyboard \
         xf86-input-mouse \
@@ -32,11 +33,5 @@ UBOOT_CONFIG[spi] = "T1042D4RDB_SPIFLASH_config,,u-boot-with-spl-pbl.bin"
 UBOOT_CONFIG[secure-boot] = "T1042D4RDB_SECURE_BOOT_config"
 
 JFFS2_ERASEBLOCK = "0x10000"
-QE_UCODE = "iram_Type_A_T1040_r1.0.bin"
-
-# Doesn't currently build with gcc7
-#EXTRA_IMAGEDEPENDS += "hypervisor"
-
-EXTRA_IMAGEDEPENDS += "fm-ucode hv-cfg qe-ucode"
 
 USE_VT ?= "0"
