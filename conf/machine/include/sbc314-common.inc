@@ -23,14 +23,10 @@ XSERVER = " \
         xserver-xorg-extension-glx \
 "
 
-UBOOT_MACHINES ?= "SBC314_PRI SBC314_SEC"
+# Abaco ships u-boot as a seperate release and we can't build
+# it in tree as GCC7 is too new for our branch
 
-UBOOT_CONFIG ??= "nand sdcard spi secure-boot nor"
-UBOOT_CONFIG[nor] = "T1042D4RDB_config"
-UBOOT_CONFIG[nand] = "T1042D4RDB_NAND_config,,u-boot-with-spl-pbl.bin"
-UBOOT_CONFIG[sdcard] = "T1042D4RDB_SDCARD_config,,u-boot-with-spl-pbl.bin"
-UBOOT_CONFIG[spi] = "T1042D4RDB_SPIFLASH_config,,u-boot-with-spl-pbl.bin"
-UBOOT_CONFIG[secure-boot] = "T1042D4RDB_SECURE_BOOT_config"
+EXTRA_IMAGEDEPENDS_remove ="u-boot"
 
 JFFS2_ERASEBLOCK = "0x10000"
 
