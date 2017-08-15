@@ -7,8 +7,9 @@ JFFS2_ERASEBLOCK = "0x10000"
 IMAGE_FSTYPES ?= "tar.gz ext2.gz ext2.gz.u-boot"
 
 MACHINE_EXTRA_RRECOMMENDS += " \
-        cpldirqc-module \
-        cpldgpio-module \
+	cpldirqc-module \
+	cpldgpio-module \
+	udev-extraconf \
 "
 
 XSERVER = " \
