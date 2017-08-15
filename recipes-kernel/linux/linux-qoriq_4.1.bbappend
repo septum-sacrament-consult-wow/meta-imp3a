@@ -10,5 +10,4 @@ SRC_URI = "git://git@towgit01/mitchellj/linux.git;branch=qoriq-sdk-2.0-abaco;pro
 "
 
 PV = "4.1+git${SRCPV}"
-SRCREV = "${AUTOREV}"
-
+SRCREV = " 14d39e736363e89a62c4a760c50b658801e9640f"
