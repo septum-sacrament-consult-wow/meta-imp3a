@@ -10,4 +10,4 @@ SRCREV = "f6453e5715d6e16063001ea7ad2ec711dd15dae8"
 
 S = "${WORKDIR}/git"
 
-SRC_URI += "git://git@towgit01/mitchellj/cpldirqc.git;protocol=ssh"
+SRC_URI += "git://git@github.com/Abaco-Systems/haswell-cpld-intc-module.git"
