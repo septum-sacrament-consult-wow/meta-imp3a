@@ -1,3 +1,5 @@
+require recipes-kernel/linux/linux-qoriq_4.1.bb
+
 SRC_URI = "git://git@towgit01/mitchellj/linux.git;branch=qoriq-sdk-2.0-abaco;protocol=ssh;nobranch=1 \
     file://0003-use-static-inline-in-ARM-lifeboot.h.patch \
     file://fix-the-compile-issue-under-gcc6.patch \
@@ -10,4 +12,4 @@ SRC_URI = "git://git@towgit01/mitchellj/linux.git;branch=qoriq-sdk-2.0-abaco;pro
 "
 
 PV = "4.1+git${SRCPV}"
-SRCREV = " 14d39e736363e89a62c4a760c50b658801e9640f"
+SRCREV = "14d39e736363e89a62c4a760c50b658801e9640f"

@@ -32,3 +32,5 @@ EXTRA_IMAGEDEPENDS_remove ="u-boot"
 JFFS2_ERASEBLOCK = "0x10000"
 
 USE_VT ?= "0"
+
+PREFERRED_PROVIDER_virtual/kernel = "linux-qoriq-abaco"
