@@ -6,9 +6,12 @@ JFFS2_ERASEBLOCK = "0x10000"
 
 IMAGE_FSTYPES ?= "tar.gz ext2.gz ext2.gz.u-boot"
 
+MACHINE_FEATURES += "vfat"
+
 MACHINE_EXTRA_RRECOMMENDS += " \
 	cpldirqc-module \
 	cpldgpio-module \
+	linux-ipmi \
 	udev-extraconf \
 "
 
