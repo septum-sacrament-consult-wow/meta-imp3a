@@ -10,4 +10,4 @@ SRCREV = "c4adaba8dd1deed6f591762f2a1068e446ed379c"
 
 S = "${WORKDIR}/git"
 
-SRC_URI += "git://git@towgit01:linux/cpldgpio.git;protocol=ssh"
+SRC_URI += "git://git@towgit01/linux/cpldgpio.git;protocol=ssh"
