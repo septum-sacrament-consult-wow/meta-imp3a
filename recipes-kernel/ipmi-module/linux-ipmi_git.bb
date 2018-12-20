@@ -7,8 +7,7 @@ LIC_FILES_CHKSUM = "file://${S}/COPYING;md5=3f83e83081872865d115926e2dfb4dba"
 
 SRCREV = "4979d5cbd69a881af9f0ded34423e7e5c81bb28e"
 
-SRC_URI = "git://git@github.com/Abaco-Systems/ipmi-linux.git;branch=master \
-           file://0001-fall-through-to-use-11A-case.patch \
+SRC_URI = "git://git@towgit01:linux/linux-ipmi.git;protocol=ssh;branch=master \
            "
 
 DEPENDS = "lockdev"
