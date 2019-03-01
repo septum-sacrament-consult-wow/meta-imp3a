@@ -13,6 +13,7 @@ MACHINE_EXTRA_RRECOMMENDS += " \
 	cpldgpio-module \
 	linux-ipmi \
 	udev-extraconf \
+	eeprom-dip \
 "
 
 XSERVER = " \
