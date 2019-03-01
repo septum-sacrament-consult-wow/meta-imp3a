@@ -2,6 +2,10 @@ DESCRIPTION = "user space IPMI implementation for Abaco BMM/BMC operating with a
 LICENSE = "GPLv2"
 S = "${WORKDIR}/git"
 
+#avoid GNU_HASH error in Bitbake
+TARGET_CC_ARCH += "${LDFLAGS}"
+
+
 LIC_FILES_CHKSUM = "file://${S}/COPYING;md5=fcb02dc552a041dee27e4b85c7396067"
 
 SRCREV = "8f1e7ab4bdb89bc8ca2be47445987475a49cfba7"
@@ -19,5 +23,5 @@ do_install_append() {
 }
 
 
-FILES_${PN} = " ${mandir}/eeprom-dip.1 ${bindir}/abaco-dip ${D}/etc/abaco-dip.conf "
+FILES_${PN} = " /usr/share/man/man1/eeprom-dip.1 ${bindir}/eeprom-dip /etc/abaco-dip.conf "
 
