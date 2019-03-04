@@ -8,7 +8,7 @@ TARGET_CC_ARCH += "${LDFLAGS}"
 
 LIC_FILES_CHKSUM = "file://${S}/COPYING;md5=fcb02dc552a041dee27e4b85c7396067"
 
-SRCREV = "1a1bef41cba16e9b3772f350286e189541717a3f"
+SRCREV = "92b03e3b22093a85d38de913fce2c4f307383863"
 
 SRC_URI = "git://git@towgit01/stever/eeprom-dip.git;protocol=ssh;branch=master \
            "
