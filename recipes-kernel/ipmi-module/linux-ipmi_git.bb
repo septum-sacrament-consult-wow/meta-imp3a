@@ -2,6 +2,7 @@ DESCRIPTION = "user space IPMI implementation for Abaco BMM/BMC operating with a
 LICENSE = "BSD-3-Clause"
 PV = "git+${SRCPV}"
 S = "${WORKDIR}/git"
+inherit manpages
 
 LIC_FILES_CHKSUM = "file://${S}/COPYING;md5=3f83e83081872865d115926e2dfb4dba"
 
@@ -18,5 +19,6 @@ do_install_append() {
 }
 
 inherit autotools-brokensep
+
 
 
