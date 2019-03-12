@@ -1,0 +1,62 @@
+diff --git a/term-utils/agetty.c b/term-utils/agetty.c
+index d6cec8f..e3ee547 100644
+--- a/term-utils/agetty.c
++++ b/term-utils/agetty.c
+@@ -1598,26 +1598,11 @@ static int process_netlink(void)
+ 	return changed;
+ }
+ 
++
+ static int wait_for_term_input(int fd)
+ {
+ 	char buffer[sizeof(struct inotify_event) + NAME_MAX + 1];
+-	struct termios orig, nonc;
+ 	fd_set rfds;
+-	int count, i;
+-
+-	/* Our aim here is to fall through if something fails
+-         * and not be stuck waiting. On failure assume we have input */
+-
+-	if (tcgetattr(fd, &orig) != 0)
+-		return 1;
+-
+-	memcpy(&nonc, &orig, sizeof (nonc));
+-	nonc.c_lflag &= ~(ICANON | ECHO | ECHOE | ECHOK | ECHOKE);
+-	nonc.c_cc[VMIN] = 1;
+-	nonc.c_cc[VTIME] = 0;
+-
+-	if (tcsetattr(fd, TCSANOW, &nonc) != 0)
+-		return 1;
+ 
+ 	if (inotify_fd == AGETTY_RELOAD_FDNONE) {
+ 		/* make sure the reload trigger file exists */
+@@ -1658,15 +1643,6 @@ static int wait_for_term_input(int fd)
+ 			return 1;
+ 
+ 		if (FD_ISSET(fd, &rfds)) {
+-			count = read(fd, buffer, sizeof (buffer));
+-
+-			tcsetattr(fd, TCSANOW, &orig);
+-
+-			/* Reinject the bytes we read back into the buffer, usually just one byte */
+-			for (i = 0; i < count; i++)
+-				ioctl(fd, TIOCSTI, buffer + i);
+-
+-			/* Have terminal input */
+ 			return 1;
+ 
+ 		} else if (netlink_fd >= 0 && FD_ISSET(netlink_fd, &rfds)) {
+@@ -1678,12 +1654,10 @@ static int wait_for_term_input(int fd)
+ 			while (read(inotify_fd, buffer, sizeof (buffer)) > 0);
+ 		}
+ 
+-		tcsetattr(fd, TCSANOW, &orig);
+-
+-		/* Need to reprompt */
+ 		return 0;
+ 	}
+ }
++
+ #endif  /* AGETTY_RELOAD */
+ static void print_issue_file(struct options *op, struct termios *tp)
+ {
