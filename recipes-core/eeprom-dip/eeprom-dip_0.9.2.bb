@@ -9,7 +9,7 @@ inherit manpages
 
 LIC_FILES_CHKSUM = "file://${S}/COPYING;md5=fcb02dc552a041dee27e4b85c7396067"
 
-SRCREV = "e86a0fd3a20ae67c5613ffbaad827a3e01befe36"
+SRCREV = "d858f6752448aae74f4410b05c80a31816ccdbf5"
 
 SRC_URI = "git://git@towgit01/stever/eeprom-dip.git;protocol=ssh;branch=master \
            "
