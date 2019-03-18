@@ -4,6 +4,6 @@ SRC_URI = "git://git@github.com/Abaco-Systems/linux-qoriq-abaco.git;branch=linux
 
 PV = "4.1+git${SRCPV}"
 
-SRCREV = "${AUTOREV}"
+SRCREV = "776dff8d035a29fcd12dd76a77db80c51f9ef544"
 
 COMPATIBLE_MACHINE = "(sbc314-t1042|sbc314-t2081)"
