@@ -11,7 +11,7 @@ LIC_FILES_CHKSUM = "file://${S}/COPYING;md5=fcb02dc552a041dee27e4b85c7396067"
 
 SRCREV = "d858f6752448aae74f4410b05c80a31816ccdbf5"
 
-SRC_URI = "git://git@github.com/Abaco-Systems/eeprom-dip.git;branch=master \
+SRC_URI = "git://github.com/Abaco-Systems/eeprom-dip.git;branch=master \
            "
 
 do_install() {
