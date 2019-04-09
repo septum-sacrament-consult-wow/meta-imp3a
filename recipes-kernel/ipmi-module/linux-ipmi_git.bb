@@ -6,7 +6,7 @@ inherit manpages
 
 LIC_FILES_CHKSUM = "file://${S}/COPYING;md5=3f83e83081872865d115926e2dfb4dba"
 
-SRCREV = "baa5347f528b9eefd03666ff0c8a3fd03ac8d30d"
+SRCREV = "7253a1ac5965c3bef291e35d659b2a8ed6eec069"
 
 SRC_URI = "git://github.com/Abaco-Systems/ipmi-linux.git;branch=master \
            "
